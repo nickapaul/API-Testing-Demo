@@ -1,15 +1,18 @@
 import unittest
 import json
-import Helpers.mlb_api.mlb_api_helpers as mlb_help
-
-
+import Helpers.pet_store_helpers as pet_help
 
 class ApiTestDemo(unittest.TestCase):
 
-  def test_GIVEN_mlb_player_id_THEN_player_info_is_returned_and_Confirmed(self):  
-    expected_last_name= 'Cespedes'
-    player_raw = mlb_help.get_player_info('493316')
+  def test_GIVEN_pet_is_created_THEN_pet_can_be_returned(self):  
+    expected_dog_name= 'Brady'
+    pet_id = pet_help.create_pet_and_return_pet_id()
+
+    pet = pet_help.get_pet_via_pet_id(pet_id)
+
+    self.assertEqual(expected_dog_name, pet['name'])
+
+
+
   
-    player = json.loads(player_raw.content)
-    player_last_name = player['player_info']['queryResults']['row']['name_last']
-    self.assertEqual(expected_last_name, player_last_name)
+   
