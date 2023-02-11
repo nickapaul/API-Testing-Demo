@@ -27,11 +27,11 @@ jobs:
         pip install -r requirements.txt
     
     - name: Test with pytest
-      continue-on-error: true
       run: |
         nose2
     
-    - name: Upload test file      
+    - name: Upload test file
+      if: always()      
       uses: actions/upload-artifact@v3
       with:
           name: my-artifact
