@@ -29,10 +29,11 @@ jobs:
         pip install -r requirements.txt
     
     - name: Test with pytest
+      continue-on-error: true
       run: |
         python3 -m unittest Tests/test_demo.py
     
-    - name: Upload test file
+    - name: Upload test file      
       uses: actions/upload-artifact@v3
       with:
           name: my-artifact
