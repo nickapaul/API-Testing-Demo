@@ -31,7 +31,7 @@ jobs:
     - name: Test with pytest
       continue-on-error: true
       run: |
-        python3 -m unittest Tests/test_demo.py
+        nose2
     
     - name: Upload test file      
       uses: actions/upload-artifact@v3
