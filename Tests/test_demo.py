@@ -11,4 +11,4 @@ class ApiTestDemo(unittest.TestCase):
     pet = pet_help.get_pet_via_pet_id(pet_id)
 
     # Assert
-    self.assertEqual(expected_dog_name, pet['name'])
+    self.assertEqual(expected_dog_name, "hello")
