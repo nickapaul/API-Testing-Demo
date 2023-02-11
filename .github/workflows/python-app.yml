@@ -33,7 +33,7 @@ jobs:
         python3 -m unittest Tests/test_demo.py
     
     - name: Upload test file
-    - uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v3
       with:
           name: my-artifact
           path: test_results/
