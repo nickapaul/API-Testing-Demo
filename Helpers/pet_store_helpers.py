@@ -47,5 +47,5 @@ def get_pet_via_pet_id(pet_id):
 
 
 
-def create_pet_and_return_pet_id(pet_name='Brady'):
+def create_pet_and_return_pet_id(pet_name):
     return json.loads(create_pet(pet_name).content)['id']    
