@@ -9,17 +9,15 @@ The next progression took me from a dev (in my head a dev is anybody who writes 
 
 Anyways that was all to say that this a proof of concept that with a little setup, a fleshed-out testing suite complete with configured testing pipeline is easy to set up and maintain.
 
-
-
 ## The Pipeline
-The pipeline is designed to execute on merge request to master. I know that in this example im just running the test itself so you would think I ran my test before I checked it in (looking at you "works on my machine" guys). Just imaghine that in most build and deploy tools you can chain piupelines or call pipelines from other pipelines. So if your tetss are fast enough, yhou can gate merges from dev to QA with the regression tests. 
+The pipeline is designed to execute on merge request to master. I know that in this example I’m just running the test itself, so you would think I ran my test before I checked it in (looking at you "works on my machine" guys). Just imagine that in most build and deploy tools you can chain pipelines or call pipelines from other pipelines. So, if your tests are fast enough, you can gate merges from dev to QA with the regression tests.
 
 This desgin goes as follows:
-Pull Source
-Set Up Python
-Install Dependencies
-Run Test
-Create HTML Report
+- Pull Source
+- Set Up Python
+- Install Dependencies
+- Run Test
+- Create HTML Report
 
 This is all coinfigured froim the python-app.yml in the .github/workflows folder. Every check-in to master will kick off a build and keep the merge from hapening if the build fails.
 
