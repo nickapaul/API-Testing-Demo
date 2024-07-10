@@ -13,3 +13,4 @@ class TestExample:
     def test_example(self): 
         response = auth.get_auth_endpoint_response(self)
         assert response.status_code == 200
+

@@ -11,3 +11,4 @@ def read_json_to_dict(filepath):
     except json.JSONDecodeError:
         print(f"Error decoding JSON from the file {filepath}.")
         return None
+    

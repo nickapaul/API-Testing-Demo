@@ -11,3 +11,4 @@ def get_auth_endpoint_response(self):
     'Content-Type': 'application/json'
     }
     return requests.request("POST", url, headers=headers, data=payload)
+

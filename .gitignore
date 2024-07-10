@@ -4,3 +4,4 @@
 /Helpers/__pycache__
 /Tests/__pycache__
 *.pyc
+/Reports/report.xml
