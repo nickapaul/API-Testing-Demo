@@ -14,7 +14,7 @@ permissions:
   pull-requests: write
 
 jobs:
-  build:
+  Test:
     runs-on: ubuntu-latest
 
     steps:
