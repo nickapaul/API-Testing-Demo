@@ -35,8 +35,7 @@ The `.github/workflows/python-app.yml` file defines the GitHub Actions workflow 
 
 - **Trigger Conditions**: The workflow is triggered on `workflow_dispatch` events, allowing manual triggers, and on pull requests to the `master` branch.
 - **Python Version**: The workflow uses Python 3.10 for running tests and linting.
-- **Dependency Installation**: Dependencies are installed using `pip`, including `flake8` for linting and `pytest` for running tests. Use the following command to install:
-- **Linting**: The code is linted with `flake8` to ensure it meets Python coding standards.
+- **Dependency Installation**: Dependencies are installed using `pip`, including `pytest` for running tests. Use the following command to install:
 - **Test Run**: The code is ran with pytest.
 - **Consume Test Report**: Github action then consumes the test report and displays it in the build list summary page.
 ## Contributing
